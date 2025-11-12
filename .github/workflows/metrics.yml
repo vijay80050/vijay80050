@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # 👈 allows the workflow to commit the generated SVG
+  contents: write   # allows commit of the SVG
 
 jobs:
   github-metrics:
@@ -14,20 +14,11 @@ jobs:
       - name: Generate metrics
         uses: lowlighter/metrics@latest
         with:
-          # REQUIRED: use a token to avoid rate limits & allow commits
           token: ${{ secrets.METRICS_TOKEN }}
-
-          # Your GitHub username
           user: vijay80050
-
-          # Output file
           filename: github-metrics.svg
-
-          # Commit to main branch
           committer_branch: main
           committer_message: "chore: update metrics"
-
-          # Layout & plugins
           template: classic
           base: header, activity, repositories
           plugin_isocalendar: yes
