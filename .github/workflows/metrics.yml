@@ -1,14 +1,33 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 0 * * *" }]
+  schedule:
+    - cron: "0 0 * * *"    # every day at midnight UTC
   workflow_dispatch:
+
+permissions:
+  contents: write   # 👈 allows the workflow to commit the generated SVG
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
         with:
+          # REQUIRED: use a token to avoid rate limits & allow commits
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Your GitHub username
           user: vijay80050
+
+          # Output file
+          filename: github-metrics.svg
+
+          # Commit to main branch
+          committer_branch: main
+          committer_message: "chore: update metrics"
+
+          # Layout & plugins
           template: classic
           base: header, activity, repositories
           plugin_isocalendar: yes
