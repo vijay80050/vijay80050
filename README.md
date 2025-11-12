@@ -1,4 +1,4 @@
-<h1 align="center">👋 Vijay Kumar</h1>
+<h1 align="center">Hi 👋, I'm Vijay Kumar</h1>
 <p align="center">
   <b>Full-Stack Developer • MERN & Django • LLM Integrations • AWS | GCP</b>
 </p>
