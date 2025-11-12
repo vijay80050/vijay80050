@@ -44,3 +44,7 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vijay80050/vijay80050/output/github-snake.svg"/>
   <img alt="github-snake" src="https://raw.githubusercontent.com/vijay80050/vijay80050/output/github-snake.svg"/>
 </picture>
+<img src="https://raw.githubusercontent.com/vijay80050/vijay80050/main/github-metrics.svg" alt="metrics" />
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vijay%20Kumar-blue)](https://linkedin.com/in/vijay-kumar-702b921bb)
+[![Email](https://img.shields.io/badge/Email-vijaykumar.cse002%40gmail.com-informational)](mailto:vijaykumar.cse002@gmail.com)
+
